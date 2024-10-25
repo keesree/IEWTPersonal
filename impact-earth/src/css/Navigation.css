@@ -1,0 +1,25 @@
+ul, li {
+    list-style:none;
+}
+nav{
+    width: 100vw;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    top: 0;
+    left:0;
+    background: teal;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000'
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+ul li {
+    margin-right: 20px;
+}
+a{
+    color: white !important;
+}
