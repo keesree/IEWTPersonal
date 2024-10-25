@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+import ReactDOM from 'react-dom'
 import reactLogo from "./assets/react.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRoutes } from "react-router-dom";
@@ -14,7 +15,7 @@ import Support from "./pages/Support";
 import ImpactEarthAward from "./pages/ImpactEarthAward";
 
 function App() {
-  /* let element = useRoutes([
+  let element = useRoutes([
     {
       path: "/",
       element: <Home />,
@@ -43,11 +44,12 @@ function App() {
       path: "/award",
       element: <ImpactEarthAward />,
     },
-  ]); */
+  ]);
 
   return (
     <div className="app">
-      <Home />
+      <Navigation />
+      <main>{element}</main>
     </div>
   );
 }

@@ -4,16 +4,13 @@ import Navigation from "../components/Navigation";
 import Carousel from "react-bootstrap/Carousel";
 //import ExampleCarouselImage from "components/ExampleCarouselImage";
 import ArticleCard from "../components/ArticleCard";
-import '../App.css'
+import "../App.css";
 
 const Home = () => {
   //Home page should have a carousel of featured stories
 
   return (
     <div>
-      <div className="navBar">
-        <Navigation />
-      </div>
       <div className="featuredCarousel">
         <Carousel>
           <Carousel.Item>
