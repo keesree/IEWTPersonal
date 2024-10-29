@@ -10,11 +10,18 @@
   color: #888;
 }
 .articleContainer{
-  display: flex;
+  display: inline-flex;
   flex-wrap:wrap;
   gap: 20px;
+  width: 900px;
 }
 .featuredCarousel{
   top: 2vh;
   text-align:center;
+}
+.carouselItems{
+  height:200px;
+}
+h3{
+  padding:20px;
 }

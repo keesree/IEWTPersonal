@@ -1,0 +1,11 @@
+.articleCard{
+    width: 400px; 
+    height: 400px;
+    border: 2px solid rgb(25, 142, 109);
+    
+
+}
+.articleCard img{
+    width: 399px;
+    height: 250px;
+}
