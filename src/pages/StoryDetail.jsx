@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import '../css/ArticleCard.css'; // Ensure you have the correct CSS file for styling
+
 
 const StoryDetail = () => {
   const location = useLocation();
