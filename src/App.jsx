@@ -42,6 +42,10 @@ function App() {
     {
       path: "/award",
       element: <ImpactEarthAward />,
+    },
+    {
+      path: "/stories/:id", // Add dynamic route for StoryDetail
+      element: <StoryDetail />,
     }
   ]);
 

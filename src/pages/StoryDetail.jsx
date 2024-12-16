@@ -1,34 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const StoryDetail = () => {
-    const { id } = useParams();  // Get the story ID from the URL
-    const [story, setStory] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const article = location.state?.article; // Get the article data from state
 
-    useEffect(() => {
-        const fetchStory = async () => {
-            try {
-                const response = await axios.get(`http://localhost:5000/api/stories/${id}`);
-                setStory(response.data);  // Store the story details in state
-            } catch (error) {
-                console.error('Error fetching story details:', error);
-            }
-        };
-
-        fetchStory();
-    }, [id]);  // Fetch story whenever the ID changes
-
-    if (!story) return <p>Loading...</p>;
-
+  if (!article) {
+    // If no article data is found, redirect or show an error
     return (
-        <div className="story-detail">
-            <h2>{story.title}</h2>
-            <p>By: {story.author}</p>
-            <div>{story.content}</div>
-            {story.image_url && <img src={story.image_url} alt={story.title} />}
-        </div>
+      <div>
+        <h2>Article Not Found</h2>
+        <button onClick={() => navigate(-1)}>Go Back</button>
+      </div>
     );
+  }
+
+  return (
+    <div className="story-detail">
+      <h1>{article.title}</h1>
+      <p><strong>Author:</strong> {article.author}</p>
+      {article.image && <img src={article.image} alt={article.title} className="story-image" />}
+      <p>{article.summary}</p>
+      <div>
+        <p>{article.fullContent}</p> {/* Render full content if available */}
+      </div>
+    </div>
+  );
 };
 
 export default StoryDetail;
