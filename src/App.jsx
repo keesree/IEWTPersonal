@@ -1,18 +1,17 @@
 import React from "react";
-import ReactDOM from 'react-dom'
-import reactLogo from "./assets/react.svg";
+import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRoutes } from "react-router-dom";
-import viteLogo from "/vite.svg";
 import Home from "./pages/Home";
-import "./App.css";
-import Navigation from "./components/Navigation";
 import About from "./pages/About";
 import GlobalStories from "./pages/GlobalStories";
 import LocalStories from "./pages/LocalStories";
 import GetInvolved from "./pages/GetInvolved";
 import Support from "./pages/Support";
 import ImpactEarthAward from "./pages/ImpactEarthAward";
+import StoryDetail from "./pages/StoryDetail";  // Import the story detail page
+import Navigation from "./components/Navigation";
+import "./App.css";
 
 function App() {
   let element = useRoutes([
@@ -43,6 +42,14 @@ function App() {
     {
       path: "/award",
       element: <ImpactEarthAward />,
+    },
+    {
+      path: "/submit",  // Add the route for the form submission page
+      element: <GetInvolved />,
+    },
+    {
+      path: "/story/:id",  // Add the dynamic route for the story detail page
+      element: <StoryDetail />,
     },
   ]);
 

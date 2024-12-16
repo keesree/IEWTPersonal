@@ -4,7 +4,7 @@ import { useState } from "react";
 const GlobalStories = () => {
     return (
         <div>
-          <h1>Global Stories</h1>
+          <h1>google form to here</h1>
         </div>
       );
 };

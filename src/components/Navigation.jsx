@@ -12,16 +12,16 @@ const Navigation = () => {
 
       <ul className="nav-list">
         <li>
-          <a href="/">Home</a>
+          <a href="/">About Us</a>
         </li>
         <li>
-          <a href="/about">About Us</a>
+          <a href="/local">Local Stories</a>
         </li>
         <li>
-          <a href="/globalstories">Global Stories</a>
+          <a href="/global">Global Stories</a>
         </li>
         <li>
-          <a href="/localstories">Local Stories</a>
+          <a href="/personal">Personal Stories</a>
         </li>
         <li>
           <a href="/getinvolved">Get Involved</a>
