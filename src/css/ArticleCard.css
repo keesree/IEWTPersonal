@@ -18,7 +18,7 @@
   padding: 15px;
   width: 300px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 400px; /* Fixed height to keep cards uniform */
+  height: 330px; /* Fixed height to keep cards uniform */
 }
 
 .article-card h2 {
@@ -30,7 +30,6 @@
 .article-card p {
   margin: 5px 0;
   color: #666;
-  flex-grow: 1; /* Allows paragraph to take remaining space */
 }
 
 .article-card .read-more {
