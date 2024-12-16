@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/ArticleCard.css'; // Ensure you have the correct CSS file for styling
+import { colors } from '@mui/material';
 
 const PersonalStories = () => {
   const [articles, setArticles] = useState([]);
@@ -45,7 +46,6 @@ const PersonalStories = () => {
             <p><strong>Author:</strong> {article.author}</p>
             <p>{article.summary}</p>
             <Link 
-              
               to={`/stories/${index}`} 
               state={{ article }} // Pass the full article data via state
               className="read-more"

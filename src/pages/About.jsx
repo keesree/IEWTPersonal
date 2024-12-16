@@ -19,7 +19,7 @@ const about =() => {
               alt="Pic 1"
             />
             <Carousel.Caption>
-              <h3>Inspiring Stories from Around the World!</h3>
+              <h3>Inspiring Stories from Around the World!!</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
