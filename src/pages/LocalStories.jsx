@@ -1,43 +1,56 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import '../css/ArticleCard.css'; // Ensure you have the correct CSS file for styling
 
 const LocalStories = () => {
-  const [stories, setStories] = useState([]);
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Fetch stories from the backend when the component is mounted
   useEffect(() => {
-    const fetchStories = async () => {
+    const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/stories');
-        setStories(response.data);  // Set the fetched stories into state
-      } catch (error) {
-        console.error('Error fetching stories:', error);
+        const response = await fetch(
+          'https://script.google.com/macros/s/AKfycby2XVIvcESgMc0NM0D7tqxeUyCR17M_idrx6PpYPjLN4WKjTQXiNdFD06IFIRCTUyiVbQ/exec' // Replace with your Web App URL
+        );
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        setArticles(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchStories();
+    fetchData();
   }, []);
 
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
-    <div className="container mt-4">
-      <h2>google form to here local stories</h2>
-      <div className="row">
-        {stories.map((story) => (
-          <div key={story.id} className="col-md-4 mb-4">
-            <div className="card">
-              <Link to={`/story/${story.id}`} style={{ textDecoration: 'none' }}>
-                <img
-                  src={story.image_url}
-                  alt={story.title}
-                  className="card-img-top"
-                  style={{ height: '200px', objectFit: 'cover' }}
-                />
-                <div className="card-body">
-                  <h5 className="card-title" style={{ color: 'black' }}>{story.title}</h5>
-                </div>
-              </Link>
-            </div>
+    <div className="stories">
+      <h1>Local Stories</h1>
+      <div className="articles">
+        {articles.map((article, index) => (
+          <div className="article-card" key={index}>
+            <h2>{article.title}</h2>
+            {/* Display image */}
+            {article.image && (
+              <img src={article.image} alt={article.title} className="article-image" />
+            )}
+            <p><strong>Author:</strong> {article.author}</p>
+            <p>{article.summary}</p>
+            <Link 
+              to={`/stories/${index}`} 
+              state={{ article }} // Pass the full article data via state
+              className="read-more"
+            >
+              Read Full Article
+            </Link>
           </div>
         ))}
       </div>
