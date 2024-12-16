@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useRoutes } from "react-router-dom";
-import Home from "./pages/Home";
 import About from "./pages/About";
 import GlobalStories from "./pages/GlobalStories";
 import LocalStories from "./pages/LocalStories";
@@ -12,24 +11,25 @@ import ImpactEarthAward from "./pages/ImpactEarthAward";
 import StoryDetail from "./pages/StoryDetail";  // Import the story detail page
 import Navigation from "./components/Navigation";
 import "./App.css";
+import PersonalStories from "./pages/PersonalStories";
 
 function App() {
   let element = useRoutes([
     {
       path: "/",
-      element: <Home />,
+      element: <About/>,
     },
     {
-      path: "/about",
-      element: <About />,
+      path: "/localstories",
+      element: <LocalStories />,
     },
     {
       path: "/globalstories",
       element: <GlobalStories />,
     },
     {
-      path: "/localstories",
-      element: <LocalStories />,
+      path: "/PersonalStories",
+      element: <PersonalStories/>,
     },
     {
       path: "/getinvolved",
@@ -42,15 +42,7 @@ function App() {
     {
       path: "/award",
       element: <ImpactEarthAward />,
-    },
-    {
-      path: "/submit",  // Add the route for the form submission page
-      element: <GetInvolved />,
-    },
-    {
-      path: "/story/:id",  // Add the dynamic route for the story detail page
-      element: <StoryDetail />,
-    },
+    }
   ]);
 
   return (

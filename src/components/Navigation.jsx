@@ -15,13 +15,13 @@ const Navigation = () => {
           <a href="/">About Us</a>
         </li>
         <li>
-          <a href="/local">Local Stories</a>
+          <a href="/LocalStories">Local Stories</a>
         </li>
         <li>
-          <a href="/global">Global Stories</a>
+          <a href="/globalstories">Global Stories</a>
         </li>
         <li>
-          <a href="/personal">Personal Stories</a>
+          <a href="/PersonalStories">Personal Stories</a>
         </li>
         <li>
           <a href="/getinvolved">Get Involved</a>

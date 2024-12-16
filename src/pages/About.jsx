@@ -3,10 +3,9 @@ import { useRoutes } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Carousel from "react-bootstrap/Carousel";
 //import ExampleCarouselImage from "components/ExampleCarouselImage";
-import ArticleCard from "../components/ArticleCard";
 import "../App.css";
 
-const Home = () => {
+const about =() => {
   //Home page should have a carousel of featured stories
 
   return (
@@ -52,4 +51,4 @@ const Home = () => {
       </div>
   );
 };
-export default Home;
+export default about;

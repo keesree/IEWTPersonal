@@ -21,7 +21,7 @@ const LocalStories = () => {
 
   return (
     <div className="container mt-4">
-      <h2>google form to here</h2>
+      <h2>google form to here local stories</h2>
       <div className="row">
         {stories.map((story) => (
           <div key={story.id} className="col-md-4 mb-4">
