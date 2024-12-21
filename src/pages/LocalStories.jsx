@@ -11,7 +11,7 @@ const LocalStories = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://script.google.com/macros/s/AKfycby2XVIvcESgMc0NM0D7tqxeUyCR17M_idrx6PpYPjLN4WKjTQXiNdFD06IFIRCTUyiVbQ/exec' // Replace with your Web App URL
+          'https://script.google.com/macros/s/AKfycbyyBGJinEpq6jXEXcoyGcOrCHmpDGNVdSVFV-uRpjXrh15tVY12ZW5NrRjFuL22eErC/exec' // Replace with your Web App URL
         );
         if (!response.ok) {
           throw new Error('Failed to fetch data');

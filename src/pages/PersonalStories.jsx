@@ -12,7 +12,7 @@ const PersonalStories = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://script.google.com/macros/s/AKfycbzCeitt_6plSqkLnTi9ybtbzGfqRd9wdlBKxi2B1xVHY3N8JfgkQQLeXXWQdcfXNKcX/exec' // Replace with your Web App URL
+          'https://script.google.com/macros/s/AKfycbxM1Q7QsgrB-hZPi53EOxhMiM9SlzTh3fgKNATGxvSXba2UgFmGoynq6z6dxWAfVFnunA/exec' // Replace with your Web App URL
         );
         if (!response.ok) {
           throw new Error('Failed to fetch data');

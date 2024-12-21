@@ -11,7 +11,7 @@ const GlobalStories = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://script.google.com/macros/s/AKfycbyjsjJlHvSflFQthu4ZGnMfxa74G021sChC2sNlsmWuWWrnwPZLalEJZThi4x-nyn36tA/exec' // Replace with your Web App URL
+          'https://script.google.com/macros/s/AKfycbwpOyTDnHP5co1B7uspaXe52wcGoFueWk6or-ETLhX9m4ndgE9gSpb-qzLhQuBxEzayow/exec' // Replace with your Web App URL
         );
         if (!response.ok) {
           throw new Error('Failed to fetch data');
