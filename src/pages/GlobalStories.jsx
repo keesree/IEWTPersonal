@@ -40,7 +40,7 @@ const GlobalStories = () => {
             <h2>{article.title}</h2>
             {/* Display image */}
             {article.image && (
-              <img src={article.image} alt={article.title} className="article-image" />
+              <img src="https://media.gettyimages.com/id/1367479760/photo/view-over-dunes-with-dune-grass-at-sunset-by-the-sea.jpg?s=612x612&w=gi&k=20&c=klT9qRJyskvf0pbmvsFPsKG9B3E4QhO541Qq1qeq5Bk=" alt={article.title} className="article-image" />
             )}
             <p><strong>Author:</strong> {article.author}</p>
             <p>{article.summary}</p>
