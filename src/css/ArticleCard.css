@@ -62,7 +62,7 @@
 }
 
 .story-detail {
-  max-width: 75vw; /* Limit the width of the content */
+  max-width: 50vw; /* Limit the width of the content */
   margin: 0 auto; /* Center the content horizontally */
   padding: 20px; /* Add padding inside the container */
   font-family: Arial, sans-serif; /* Ensure consistent font */

@@ -23,7 +23,8 @@ const StoryDetail = () => {
       <h1>{article.title}</h1>
       <p><strong>Author:</strong> {article.author}</p>
       {article.image && <img src={article.image} alt={article.title} className="story-image" />}
-      <p>{article.summary}</p>
+      <br></br>
+      <br></br>
       <div>
         <p>{article.fullContent}</p> {/* Render full content if available */}
       </div>
