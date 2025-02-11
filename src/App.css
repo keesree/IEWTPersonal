@@ -1,5 +1,8 @@
 #root {
   text-align: center;
+  font-family: "Volkhov", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .card {
@@ -22,6 +25,24 @@
 .carouselItems{
   height:200px;
 }
+.quoteCaption, h1{
+  font-family: "Bricolage Grotesque", serif;
+}
 h3{
   padding:20px;
+}
+.supportPage{
+  display:flex;
+  flex-direction:column;
+  place-items:center;
+  
+}
+
+.donationOptions{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+#otherAmount{
+  width: 50px;
 }

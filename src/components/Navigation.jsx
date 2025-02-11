@@ -6,7 +6,7 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <h1>🌎Impact Earth!🌎</h1>
+          <h1 className="logo">🌎Impact Earth🌎</h1>
         </li>
       </ul>
 
