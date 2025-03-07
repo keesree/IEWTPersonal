@@ -6,7 +6,7 @@ const Checkout = () => {
   const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
   //const [currency, setCurrency] = useState(options.currency);
-  const [currency, setCurrency] = "USD";
+  const [currency, setCurrency] = useState("USD");
 
   const [donationAmount, setDonationAmount] = useState(0.0);
   const donationRef = useRef(donationAmount);
@@ -28,22 +28,26 @@ const Checkout = () => {
 
   const onDonationAmountChange = ({ target: { value } }) => {
     const numericValue = parseFloat(value);
-    if (!isNaN(numericValue)) {
+    if (!isNaN(numericValue) && numericValue > 0) {
       setDonationAmount(numericValue);
     }
   };
 
   const onCreateOrder = (data, actions) => {
-    console.log(" donationAmount", donationRef.current.toFixed(2));
-    return actions.order.create({
-      purchase_units: [
-        {
-          amount: {
-            value: donationRef.current.toFixed(2),
+    return actions.order
+      .create({
+        purchase_units: [
+          {
+            amount: {
+              value: donationRef.current.toFixed(2),
+            },
           },
+        ],
+        application_context: {
+          shipping_preference: "NO_SHIPPING",
         },
-      ],
-    });
+      })
+      .catch((error) => {});
   };
 
   const onApproveOrder = (data, actions) => {
@@ -52,8 +56,6 @@ const Checkout = () => {
       alert(`Transaction completed by ${name}`);
     });
   };
-
-  console.log("Current donationAmount", donationAmount);
 
   return (
     <div className="checkout">
