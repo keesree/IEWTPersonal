@@ -4,7 +4,7 @@ import {PayPalScriptProvider} from "@paypal/react-paypal-js"
 import Checkout from "../components/Checkout";
 import '../App.css'
 const initialOptions = {
-  "client-id": "Aardp00pvynsQX1cGIWCqEvpFmKx1bpwnVUB5eGSlPb-f-Rf46HgIuJZkYcOcp2u0a-8JZTitLGxeq0G",
+  "client-id": "AfQTrKeZegoWFPg04w-P0EVIkarLDKIQlnngrfr8lXQR5Vva9ZGfqfjWIEJdTdG4llTQlR3dkyZWpjTs",
    currency: "USD",
    intent: "capture",
 }
